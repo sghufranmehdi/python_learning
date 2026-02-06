@@ -183,10 +183,10 @@ while count < 5:
     count = count + 1  # Increase count by 1
     
 """ Data Structures in Python:
-Lists: Like a shopping list (ordered items)
-Dictionaries: Like a phone book (name > number)
-Tuples: Like coordinates (fixed values)
-Sets: Like a bag of unique items
+Lists[]: Like a shopping list (ordered items)
+Dictionaries{}: Like a phone book (name > number)
+Tuples(): Like coordinates (fixed values)
+Sets{}(without key value otherwise its dictionary): Like a bag of unique items
 """
 my_list = [1, 2, 3, 4, 5]
 print(my_list)
@@ -195,6 +195,8 @@ print(my_list)
 
 my_list.sort()
 print(my_list)
+
+my_list.index(3) # Find the index of the first occurrence of 3
 
 has_license = True
 my_list2 = ["Ghufran", 25, True, 36.5, has_license]
@@ -212,7 +214,8 @@ print(my_list2)
 my_list2.remove(25)
 print(my_list2)
 
-
+# Dictionary
+# try to store on dictionary so that you dont have to fig out the index of the value you want to access
 my_dict = {
     "name": "Ghufran", 
     "age": 25, 
@@ -220,5 +223,52 @@ my_dict = {
     }
 print(my_dict)
 
+my_dict["name"] = "Ghufran Mehdi"
+print(my_dict)
+
+my_dict["licesense"] = True
+print(my_dict)
+
+del my_dict["licesense"]
+print(my_dict)
+
 scores = dict(math=95, english=87, science=92)
 print(scores)
+
+# Tuples
+empty = ()
+point = (3,5)
+colors = ("red", "green", "blue")
+colors[0]
+single_not_tuple = (1)
+print(single_not_tuple)  # This will be an integer, not a tuple
+single_tuple = (1,)
+print(single_tuple)  # This will be a tuple
+
+
+my_tuple = (1, 2, 3, "Hello", True)
+print(my_tuple)
+print(my_tuple[0])  # Indexing
+print(my_tuple[1:4])  # Slicing
+print(len(my_tuple) ) # Length of the tuple
+print(my_tuple.count(1))  # Count occurrences of an element
+print(my_tuple.index("Hello"))  # Find index of an element
+
+#Sets
+empty_set = set()
+numbers = {1, 2, 3, 4, 5}
+fruits = set(["apple", "banana", "cherry"])
+print(fruits)
+
+fruits.add("orange")
+print(fruits)
+fruits.remove("banana")
+print(fruits)
+print("apple" in fruits)  # Check if an element is in the set
+print(len(fruits))  # Length of the set
+
+# remove duplicate from list 
+my_list_with_duplicates = [1, 2, 2, 3, 4, 4, 5]
+my_set = set(my_list_with_duplicates)
+my_list_without_duplicates = list(my_set)
+print(my_list_without_duplicates)
