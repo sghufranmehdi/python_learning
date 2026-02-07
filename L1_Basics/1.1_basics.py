@@ -1,4 +1,5 @@
 # import requests
+# pyhton terminal execute in file dir (https://python.datalumina.com/)
 
 print("Hello World from Python")
 
